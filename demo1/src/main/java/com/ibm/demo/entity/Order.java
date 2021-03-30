@@ -6,6 +6,9 @@ import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
 public class Order {
+	private float tax;
+	
+
 	@NotNull
 	@NotBlank
 	private String item;
@@ -13,6 +16,13 @@ public class Order {
 	private float price;
 	@Id
 	private String id;
+	public float getTax() {
+		return tax;
+	}
+
+	public void setTax(float tax) {
+		this.tax = tax;
+	}
 
 	public String getId() {
 		return id;
